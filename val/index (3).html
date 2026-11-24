@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumpleaños, Valery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&family=Great+Vibes&family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="confeti"></canvas>
+  <div id="globos" aria-hidden="true"></div>
+
+  <!-- ===== Sobre de entrada ===== -->
+  <div id="entrada" class="entrada">
+    <button id="sobre" class="sobre" aria-label="Abrir la tarjeta de Valery">
+      <span class="carta"><span>¡Feliz cumple!</span></span>
+      <span class="frente"></span>
+      <span class="solapa"></span>
+      <span class="sello">V</span>
+    </button>
+    <p class="para">Para <strong>Valery</strong></p>
+    <p class="pista">Toca el sobre para abrir tu tarjeta</p>
+  </div>
+
+  <!-- ===== Tarjeta ===== -->
+  <main id="tarjeta" class="tarjeta">
+    <header class="cabecera">
+      <p class="para-chico">Para alguien muy especial</p>
+      <h1>¡Feliz cumpleaños, <span>Valery!</span></h1>
+      <p class="fecha-cumple">17 años · 24 de noviembre</p>
+    </header>
+
+    <section class="escena">
+      <svg id="pastel" viewBox="0 30 400 380" role="img" aria-label="Pastel de dos pisos con una vela del número 17 y velas de colores">
+        <defs>
+          <radialGradient id="gPlato" cx="50%" cy="40%" r="60%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".7" stop-color="#ece6f0"/>
+            <stop offset="1" stop-color="#b9aec4"/>
+          </radialGradient>
+          <linearGradient id="gLadoBase" x1="0" x2="1">
+            <stop offset="0" stop-color="#c4507a"/>
+            <stop offset=".22" stop-color="#ee9ab3"/>
+            <stop offset=".45" stop-color="#fdd8e2"/>
+            <stop offset=".62" stop-color="#f6b2c5"/>
+            <stop offset="1" stop-color="#b3426a"/>
+          </linearGradient>
+          <radialGradient id="gTopeBase" cx="45%" cy="35%" r="70%">
+            <stop offset="0" stop-color="#ffe6ed"/>
+            <stop offset="1" stop-color="#f2a7bc"/>
+          </radialGradient>
+          <linearGradient id="gLadoTop" x1="0" x2="1">
+            <stop offset="0" stop-color="#d6c0a2"/>
+            <stop offset=".3" stop-color="#f7ecdc"/>
+            <stop offset=".5" stop-color="#fffbf4"/>
+            <stop offset=".7" stop-color="#f3e5d0"/>
+            <stop offset="1" stop-color="#c9af8b"/>
+          </linearGradient>
+          <linearGradient id="gGlaseado" x1="0" x2="1">
+            <stop offset="0" stop-color="#7a1036"/>
+            <stop offset=".35" stop-color="#c52a61"/>
+            <stop offset=".5" stop-color="#e2507f"/>
+            <stop offset=".7" stop-color="#bf2760"/>
+            <stop offset="1" stop-color="#6b0e30"/>
+          </linearGradient>
+          <radialGradient id="gTopeGlaseado" cx="40%" cy="35%" r="75%">
+            <stop offset="0" stop-color="#ee6696"/>
+            <stop offset="1" stop-color="#a51b4d"/>
+          </radialGradient>
+          <radialGradient id="gCrema" cx="35%" cy="30%" r="75%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".6" stop-color="#fff3ea"/>
+            <stop offset="1" stop-color="#e5cdb8"/>
+          </radialGradient>
+          <radialGradient id="gFresa" cx="35%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#ff6b81"/>
+            <stop offset="1" stop-color="#b0102e"/>
+          </radialGradient>
+          <radialGradient id="gArandano" cx="35%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#7d8fe0"/>
+            <stop offset="1" stop-color="#28306b"/>
+          </radialGradient>
+          <radialGradient id="gPerla" cx="35%" cy="30%" r="70%">
+            <stop offset="0" stop-color="#fff6c8"/>
+            <stop offset=".5" stop-color="#f3c14b"/>
+            <stop offset="1" stop-color="#b47b05"/>
+          </radialGradient>
+          <linearGradient id="gOro" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff4b8"/>
+            <stop offset=".4" stop-color="#f7c843"/>
+            <stop offset=".75" stop-color="#e3a312"/>
+            <stop offset="1" stop-color="#b97c03"/>
+          </linearGradient>
+          <radialGradient id="gLlama" cx="50%" cy="78%" r="70%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset=".28" stop-color="#fff2a0"/>
+            <stop offset=".62" stop-color="#ffb12e"/>
+            <stop offset="1" stop-color="#ff6a00" stop-opacity=".85"/>
+          </radialGradient>
+          <radialGradient id="gHalo">
+            <stop offset="0" stop-color="#ffd27a" stop-opacity=".75"/>
+            <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="gSombraVela" x1="0" x2="1">
+            <stop offset="0" stop-color="#000" stop-opacity=".28"/>
+            <stop offset=".4" stop-color="#fff" stop-opacity=".3"/>
+            <stop offset="1" stop-color="#000" stop-opacity=".32"/>
+          </linearGradient>
+          <pattern id="pRosa" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <rect width="8" height="8" fill="#fff"/><rect width="4" height="8" fill="#ff7aa2"/>
+          </pattern>
+          <pattern id="pAzul" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <rect width="8" height="8" fill="#fff"/><rect width="4" height="8" fill="#6cc3f5"/>
+          </pattern>
+          <pattern id="pLila" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+            <rect width="8" height="8" fill="#fff"/><rect width="4" height="8" fill="#b18cff"/>
+          </pattern>
+          <filter id="fDesenfoque" x="-20%" y="-50%" width="140%" height="200%">
+            <feGaussianBlur stdDeviation="6"/>
+          </filter>
+          <clipPath id="clipBase">
+            <path d="M55,260 L55,352 A145,28 0 0 0 345,352 L345,260 Z"/>
+          </clipPath>
+        </defs>
+
+        <!-- Plato -->
+        <ellipse cx="200" cy="380" rx="185" ry="20" fill="#5a1a33" opacity=".28" filter="url(#fDesenfoque)"/>
+        <ellipse cx="200" cy="365" rx="182" ry="32" fill="url(#gPlato)"/>
+        <ellipse cx="200" cy="360" rx="166" ry="26" fill="#f7f3f9"/>
+
+        <!-- Piso de abajo -->
+        <path d="M55,260 L55,352 A145,28 0 0 0 345,352 L345,260 Z" fill="url(#gLadoBase)"/>
+        <g clip-path="url(#clipBase)" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2">
+          <path d="M55,290 A145,28 0 0 0 345,290"/>
+          <path d="M55,313 A145,28 0 0 0 345,313"/>
+          <path d="M55,335 A145,28 0 0 0 345,335"/>
+        </g>
+        <g id="chispas" clip-path="url(#clipBase)"></g>
+        <ellipse cx="200" cy="260" rx="145" ry="28" fill="url(#gTopeBase)"/>
+        <g id="cremaBaseAtras"></g>
+
+        <!-- Piso de arriba -->
+        <path d="M100,170 L100,258 A100,19 0 0 0 300,258 L300,170 Z" fill="url(#gLadoTop)"/>
+        <g id="perlas"></g>
+        <path id="goteo" fill="url(#gGlaseado)"/>
+        <ellipse cx="200" cy="170" rx="100" ry="19" fill="url(#gTopeGlaseado)"/>
+        <ellipse cx="178" cy="164" rx="52" ry="5.5" fill="#fff" opacity=".22"/>
+
+        <!-- Decoración delantera -->
+        <g id="cremaBaseFrente"></g>
+        <g id="cremaPie"></g>
+
+        <!-- Velas, crema y frutas de la cima -->
+        <g id="cimaPastel"></g>
+      </svg>
+
+      <p id="mensajeVelas" class="mensaje">Pide un deseo y toca cada vela para apagarla</p>
+      <div class="botones">
+        <button id="btnSoplar" class="btn">Soplar las velas</button>
+        <button id="btnEncender" class="btn btn-claro" hidden>Encender de nuevo</button>
+        <button id="btnMusica" class="btn btn-claro">Música</button>
+      </div>
+    </section>
+
+    <section class="carta-mensaje">
+      <p class="saludo">Querida Valery:</p>
+      <p>Hoy es un día muy especial: ¡cumples 17 años! Quería ser el primero en felicitarte, y por eso preparé esta tarjeta para ti.</p>
+      <p>Los 17 se cumplen una sola vez en la vida (¡y el próximo año ya cumplimos 18!), así que espero que hoy la pases increíble.</p>
+      <p>Aunque no llevamos mucho tiempo conociéndonos, sé que eres una persona maravillosa y muy hermosa. Me encanta tu forma de ser, tus ocurrencias y el gran corazón que tienes.</p>
+      <p>Te deseo las mayores felicidades y que se hagan realidad todos los sueños que tengas.</p>
+      <p>¡Disfruta muchísimo tu día!</p>
+      <p class="firma">Te quiero mucho 💖</p>
+    </section>
+  </main>
+
+  <!-- Mensaje al apagar todas las velas -->
+  <div id="teQuiero" class="te-quiero" aria-live="polite">
+    <p>Te quiero mucho <span>💖</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
